@@ -1,0 +1,7 @@
+<div class="filters d-flex">
+    <span  (click)="filterChanged('all')" 
+            class="filter cursor-pointer" 
+            [ngClass] = "{ 'filter-selected':selectedFilter=='all' }">All</span>
+     <span  class="filter cursor-pointer" 
+            [ngClass] = "{ 'filter-selected':selectedFilter=='search' }">Search</span>
+</div>

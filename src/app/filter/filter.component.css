@@ -1,0 +1,16 @@
+select{
+    width: 100px;
+}
+
+.filter-selected{
+    border-color: #b9b9b9 !important;
+}
+
+
+.filters .filter{
+    margin-right: 25px;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #f0f0f0;
+    border-radius: 2px;
+    transition: 0.5s;
+}
