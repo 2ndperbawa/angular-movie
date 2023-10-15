@@ -6,7 +6,13 @@
 
 .movie-title{
     width: 250px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
 }
+
+
 
 .rating{
     right:0;
@@ -24,5 +30,12 @@
 
 .movie-item {
     width:250px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.movie-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+}

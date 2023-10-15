@@ -15,6 +15,7 @@
     margin-right:10px;
     transition: 0.3s;
     color:rgb(73, 73, 73);
+    cursor: pointer;
 }
 
 .genre:hover{

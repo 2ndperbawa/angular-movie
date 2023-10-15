@@ -4,7 +4,6 @@
             <img class="shadow" [src]="movie.Poster" [alt]="movie.Title">
             <div *ngIf="movie.Genre" class="genre-list mt-4 mb-4 cursor-pointer">
                 <span class="genre text-center" *ngFor="let g of movie.Genre.split(',', 3)">{{trim(g)}}</span>
-
             </div>
         </div>
         <div class="col-lg-5 movie-details mt-2">

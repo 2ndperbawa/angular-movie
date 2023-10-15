@@ -12,21 +12,22 @@ export class SearchBarComponent implements OnInit {
   searchFilter:string = "all";
   errorMessage = "";
   @Output() movies : EventEmitter<Movie> = new EventEmitter<Movie>();
+  @Output() keyword : EventEmitter<string> = new EventEmitter<string>();
   constructor(private omdbService : OMDBService) { }
   ngOnInit(): void {
   }
-
-  search(title : HTMLInputElement):void{
-     if (title.value.trim() == "") return;
-    this.omdbService.getByTitle(title.value).subscribe(
-      (data:any) => { 
-         let movie = data; 
-         this.movies.emit(movie);
-        },
-      (error: any) => { 
-        this.errorMessage = HandleErrorService.handleError(error);
-      }
-    );
+    search(keyword : HTMLInputElement):void{
+      if (keyword.value.trim() == "") return;
+      this.omdbService.getByKeyword(keyword.value).subscribe(
+        (data:any) => { 
+          let movies = data.Search; 
+          this.movies.emit(movies);
+          this.keyword.emit(keyword.value);
+          },
+        (error: any) => { 
+          this.errorMessage = HandleErrorService.handleError(error);
+        }
+      );
 
     this.searchFilter = "search";
   }

@@ -1,9 +1,8 @@
-<search-bar (movies)="displayMovie($event)"></search-bar>
-<div class="container">
-
+<search-bar (keyword)="updateKeyword($event)" (movies)="displayMovies($event)"></search-bar>
+<app-modal></app-modal>
+<div  class="container">
     <filter [selectedFilter]="selectedFilter" 
             (filter)="filterChanged($event)"></filter>
     <p class="text-danger">{{errorMessage}}</p>
-    <movies-container [movies] = "movies"></movies-container>
-
+    <movies-container (scrollBottom)="loadMore()" [scrollStatus]="scrollStatus" [page]="page"  [movies] = "movies"></movies-container>
 </div>
