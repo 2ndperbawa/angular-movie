@@ -1,24 +1,40 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 col-md-8 col-sm-12 text-center">
-            <img class="shadow" [src]="movie.Poster" [alt]="movie.Title">
-            <div *ngIf="movie.Genre" class="genre-list mt-4 mb-4 cursor-pointer">
-                <span class="genre text-center" *ngFor="let g of movie.Genre.split(',', 3)">{{trim(g)}}</span>
-            </div>
+<div class="container movie-detail-container">
+    <div class="detail-bg">
+        <div class="detail-bg-filter"></div>
+        <img class="detail-bg-img" src="../../assets/detail-bg.jpg" alt="">
+    </div>
+    <div class="movie-detail-inner-container row">
+        <div class="poster-div col-lg-3 col-md-8 col-sm-12 text-center">
+            <img class="poster-img shadow" [src]="movie.Poster" [alt]="movie.Title">
         </div>
         <div class="col-lg-5 movie-details mt-2">
-            <ul>
-                <li>
-                    <b>Title: </b> {{movie.Title}} ( {{movie.Year}} )
-                </li>
-                <li>{{movie.Plot}}</li>
-                <li><b>Rated: </b> {{movie.Rated}}</li>
-                <li><b>Writer: </b> {{movie.Writer}}</li>
-                <li><b>Director: </b> {{movie.Director}}</li>
-                <li><b>Duration: </b> {{movie.Runtime}}</li>
-                <li><b>Rating: </b> {{movie.imdbRating}}  <i class="bi bi-star-fill star-icon"> </i></li>
-            </ul>
-
+            <div class="mov-details-inner">
+                <ul>
+                    <li class="title-container">
+                        {{movie.Title}}
+                    </li>
+                    <li class="short-detail-container"> {{movie.Year}}  |  {{movie.Rated}}  |  {{movie.Runtime}}</li>
+                    
+                    <li class="rating-detail-container"> 
+                        <div class="star-rating-container"> 
+                            <div class="star-rating" *ngFor="let index of starCountArray; let i = index"> 
+                                <i *ngIf="i < movieRating" class="bi bi-star-fill star-icon"> </i> 
+                                <i *ngIf="i >= movieRating;" class="bi bi-star star-icon"> </i> 
+                            </div> 
+                        </div> 
+                    </li>
+                    
+                    <li><b>Writer: </b> {{movie.Writer}}</li>
+                    <li><b>Director: </b> {{movie.Director}}</li>
+                    <li class="writer-container">{{movie.Plot}}</li>
+                </ul>
+                <div *ngIf="movie.Genre" class="genre-list mt-4 mb-4 cursor-pointer">
+                    <span class="genre text-center" *ngFor="let g of movie.Genre.split(',', 3)">{{trim(g)}}</span>
+                </div>
+                <div class=" mt-4 mb-4 cursor-pointer">
+                    <button routerLink="/home" class="btn back-btn"> <i class="bi bi-arrow-left "> </i>  back</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

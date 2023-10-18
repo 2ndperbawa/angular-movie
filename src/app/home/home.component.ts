@@ -59,9 +59,6 @@ export class HomeComponent implements OnInit {
     this.page = 1;
     this.scrollStatus = true;
     this.errorMessage = "";
-    console.log(movies);
-    console.log(this.page);
-    console.log(this.scrollStatus);
     this.movies = [];
     movies.forEach((movie: any) => {
       this.omdbService.getById(movie.imdbID).subscribe(

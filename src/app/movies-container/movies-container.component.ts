@@ -25,13 +25,12 @@ export class MoviesContainerComponent implements OnInit {
     console.log(window.innerHeight + window.scrollY);
     console.log(document.body.offsetHeight);
     
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    if ((window.innerHeight + window.scrollY + 50) >= document.body.offsetHeight) {
       console.log(this.page);
       if(this.scrollStatus){
         console.log('At the bottom!');
         this.scrollBottom.emit();
       }
-        
     }
   }
 

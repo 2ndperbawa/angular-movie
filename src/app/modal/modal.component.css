@@ -57,3 +57,11 @@
     align-items: center;
     margin-top: 10px;
 }
+.btn-detail {
+    color: white;
+    background-color: #5b5757;
+}
+
+.btn-detail:hover {
+    background-color: #989191;
+}

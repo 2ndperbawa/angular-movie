@@ -18,6 +18,7 @@ export class FilterComponent implements OnInit {
 
   filterChanged(filter:string){
     this.filter.emit(filter);
+    console.log('changed')
   }
 
 }

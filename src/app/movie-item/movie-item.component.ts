@@ -14,8 +14,8 @@ export class MovieItemComponent implements OnInit {
   }
 
   openModal(el: any) {
-    const modalTitle = document.querySelector('.modal-movie-title') as HTMLInputElement | null;
-    const modalPoster = document.querySelector('.modal-poster-img') as HTMLInputElement | null;
+    const modalTitle = document.querySelector('.modal-movie-title') as HTMLDivElement | null;
+    const modalPoster = document.querySelector('.modal-poster-img') as HTMLImageElement | null;
     const movieLink = document.querySelector('.movie-link') as HTMLAnchorElement | null;
     const genreList = document.querySelector('.genre-list') as HTMLDivElement | null;
     let   innerGenreList : string = ``;

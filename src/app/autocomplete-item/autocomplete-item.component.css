@@ -1,0 +1,45 @@
+.autoCompleteItem{
+    width: 320px;
+    height: 70px;
+    position: relative;
+    margin-left: 0;
+    display: flex;
+    border-bottom: 2px solid #f7efefe2;
+    cursor: pointer;
+}
+
+.autoCompleteItem:hover {
+    background-color: #f5efefe2;
+}
+
+.autoItem-poster-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autoItem-title-div {
+    flex: 3;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.autoItem-poster {
+    width: 45%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.autoItem-poster-img {
+    width: 100%;
+}
+
+.autoItem-title-div{
+    display: flex;
+    align-items: center;
+}
+
+.autoItem-title{
+
+}

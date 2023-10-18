@@ -14,6 +14,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AutocompleteItemComponent } from './autocomplete-item/autocomplete-item.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     MovieDetailsComponent,
     ModalComponent,
+    AutocompleteItemComponent,
   ],
   imports: [
     BrowserModule,
